@@ -1,0 +1,182 @@
+.popup{
+    width: 240px;
+    height: 110px;
+    position: absolute;
+    background: #fff;
+    display: none;
+    z-index: 10000;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 0 10px 10px;
+    border-radius: 2px;
+}
+
+#img_container
+{
+    position: relative;
+}
+
+.border
+{
+      background: url(/img/balloon.png) no-repeat 0 0;
+      width: 46px;
+      height: 58px;
+      font-family: 'PT Serif';
+      font-size: 10px;
+      text-align: center;
+      padding: 10px 0 0 0;
+}
+
+#table tr:hover
+{
+  background: whitesmoke;
+}
+
+#table .label
+{
+  cursor: pointer;
+}
+
+
+header
+{
+  background: url(/img/bg.gif) repeat 0 0;
+  font-family: 'PT Serif';
+  font-size: 24px;
+  padding: 15px 0;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);  
+  margin: 0 0 20px 0;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+#photo
+{
+  border: 1px solid #e6e6e6;
+}
+
+.btn-primary
+{
+  color: #000 !important;
+  border-radius: 1px !important;
+  padding: 3px 15px;
+  font-size: 12px;
+  margin-right: 3px;
+  background-color: #fff!important;  
+  background-image: none; 
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.btn-female
+{
+  border-color: #d08186;
+}
+
+.btn-female.active
+{
+  background-color: #f5989d !important;
+  border-color: #d08186;
+}
+
+.btn-male
+{
+  border-color: #80d5f7;
+}
+
+.btn-male.active
+{
+  background-color: #c5ecfb !important;
+  border-color: #76d2f7;
+}
+
+.btn-0
+{
+  border-color: #afd9a9 !important;
+}
+
+.btn-0.active
+{
+  background-color: #c8e5c4 !important;
+}
+
+.btn-18
+{
+  border-color: #b1ad78 !important;
+}
+
+.btn-18.active
+{
+  background-color: #fff8a0 !important;
+}
+
+.btn-30
+{
+  border-color: #c9a276 !important;
+}
+
+.btn-30.active
+{
+  background-color: #ddc4a7 !important;
+}
+
+.popup span
+{
+  display: inline-block;
+  width: 30px;
+}
+
+.btn-success
+{
+    border-radius: 2px !important;
+    background: #8dc63f;
+    border-color: #f2f9ea #429054 #429054 #f2f9ea; 
+    float: right; 
+}
+
+.tablecol
+{
+	margin-left: 35px;
+	width: 330px;
+}
+
+.tablehead
+{
+	background: #e6e6e6;
+	font-size: 12px;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+.tablehead span
+{
+	padding-top: 8px;
+	display: inline-block;
+}
+
+.table
+{
+	border: 1px solid #e6e6e6;
+}
+
+.table th
+{
+	font-weight: normal;
+}
+
+.table>tbody>tr>td, .table>thead:first-child>tr:first-child>th
+{
+	border: none;
+}
+
+.table td
+{
+	color: #485872;
+}
