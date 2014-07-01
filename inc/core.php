@@ -3,9 +3,9 @@
 
     //settings
     define("db_host", 'localhost');
-    define("db_user", 'user');
-    define("db_pass", 'pass');
-    define("db_name", 'name');
+    define("db_user", '');
+    define("db_pass", '');
+    define("db_name", '');
     define("db_charset", 'UTF8');
     define("db_prefix", '');
 
@@ -27,9 +27,9 @@
 	    {
 	    	$this->params = $parameters;
 	    	$this->persons = $this->params['person'];
-	    	$query = "INSERT INTO `persons` (`client_id`, `date`, `coords`, `sex`, `age`) VALUES "; //coords as x1,x2,y1,y2
+	    	$query = "INSERT INTO `persons` (`client_id`, `date`, `coords`, `sex`, `age`, `IP`) VALUES "; //coords as x1,x2,y1,y2
 	    	foreach ($this->persons as $key => $value) {	    		
-	    		$query .= "('{$this->params['client_id']}', '{$this->params[date]}', '{$value['coords']}', '{$value['sex']}', '{$value['age']}')";
+	    		$query .= "('{$this->params['client_id']}', '{$this->params[date]}', '{$value['coords']}', '{$value['sex']}', '{$value['age']}', INET_ATON('{$this->params['IP']}'))";
 	    		if ( (count($this->persons)) > ($key)) {$query .= ",";}
 	    	}
 	    	$result = $this->mysqli->query($query);
@@ -52,11 +52,10 @@
 
 		static function getPhoto ()
 		{	
-			usleep (100);
 			if ($handle = opendir(static::unsort_dir)) {
 		    while (false !== ($file = readdir($handle))) { 
 		    	if ($file != "." && $file != ".." && $file!=$_COOKIE["last"]) {
-	        		return "/".static::unsort_dir."/$file";
+	        		return Array( "res" => "/".static::unsort_dir."/$file", "name" => $file);
    				 }}   			
 			}
 			closedir($handle);
